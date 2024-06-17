@@ -117,7 +117,7 @@ I used docker to create a MySql container that will spin up by using following s
 
 
 ## Application Snapshot
-<img width="906" alt="image" src="https://github.com/rachitgupta98/todo-web-app/assets/43313965/acbb7378-0642-4ff3-be1a-9511f23eae05">
+<img width="906" alt="image" src="https://github.com/rachitgupta98/todo-web-app/assets/43313965/212bf149-4493-4309-b769-2f30fccc24f4">
 
 
 
