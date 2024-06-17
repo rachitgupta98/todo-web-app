@@ -1,0 +1,247 @@
+.header {
+  text-align: center;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea, select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.todo-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.todo-item h3 {
+  margin: 0;
+}
+
+
+
+/* Container for the form */
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input fields */
+.form-container input[type="text"],
+.form-container textarea,
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Textarea specific styling */
+.form-container textarea {
+  height: 100px;
+  resize: vertical; /* Allows the textarea to be resized vertically */
+}
+
+/* Date input */
+.form-container input[type="date"] {
+  width: calc(100% - 22px); /* Adjusted for the width of the padding and border */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Select dropdown */
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Checkbox and label */
+.form-container label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Buttons */
+.form-container button {
+  background-color: #4caf50; /* Green */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.form-container button:hover {
+  background-color: #45a049; /* Darker green */
+}
+
+.form-container button[type="button"] {
+  background-color: #f44336; /* Red */
+  margin-left: 10px;
+}
+
+.form-container button[type="button"]:hover {
+  background-color: #da190b; /* Darker red */
+}
+
+
+
+
+
+
+
+
+
+.todo-item {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.todo-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.todo-item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.todo-item p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.todo-item .due-date {
+  font-style: italic;
+}
+
+.todo-item .priority {
+  font-weight: bold;
+}
+
+.todo-item .recurring {
+  font-weight: bold;
+  color: #4CAF50; /* Green color for recurring tasks */
+}
+
+.deleteBtn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.editBtn {
+  background-color: lightseagreen;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  background-color: yellowgreen;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+
+
+
+
+/* Container for the entire todo list */
+.todo-list {
+  display: flex;
+  justify-content: space-around; /* Adjust spacing between columns */
+  margin: 20px auto;
+  max-width: 900px; /* Adjust max width as needed */
+}
+
+/* Container for active todos */
+.active-todos,
+.cancelled-todos {
+  flex: 1; /* Take up equal space */
+  padding: 20px;
+  margin-right: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Heading for active and cancelled todos */
+.active-todos h2,
+.cancelled-todos h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 768px) {
+  .todo-list {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .active-todos,
+  .cancelled-todos {
+    margin-bottom: 20px;
+  }
+}

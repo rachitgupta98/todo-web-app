@@ -1,0 +1,40 @@
+version: "3.7"
+
+services:
+  mysql:
+    restart: 'on-failure'
+    image: bitnami/mysql:${MYSQL_VERSION}
+    healthcheck:
+      test: mysqladmin ping -u ${MYSQL_USER} --password=${MYSQL_PASSWORD}
+      start_period: 5s
+      timeout: 45s
+      interval: 30s
+      retries: 10
+    volumes:
+    - type: bind
+      read_only: true
+      consistency: cached
+      source: ./docker/sql/script.sql
+      target: /docker-entrypoint-initdb.d/script.sql
+    environment:
+      ALLOW_EMPTY_PASSWORD: yes
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?err}
+    ports:
+    - "${MYSQL_EXPOSED_PORT}:3306"
+    networks:
+    - todo_bridge
+  phpmyadmin:
+    image: bitnami/phpmyadmin
+    environment:
+      PMA_HOST: yoda-mysql-1
+    ports:
+    - "${PHPMYADMIN_EXPOSED_PORT}:80"
+    depends_on:
+    - mysql
+    networks:
+    - todo_bridge
+networks:
+  todo_bridge:
+    name: 'todo_bridge'
