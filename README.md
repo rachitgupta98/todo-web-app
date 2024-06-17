@@ -46,7 +46,7 @@ Follow these steps to set up and run the React frontend application:
 1. **Navigate to the Frontend Directory**:
 
     ```bash
-    cd cd todo-frontend/vite-project/
+    cd todo-frontend/vite-project/
     ```
 
 2. **Install Dependencies**:
