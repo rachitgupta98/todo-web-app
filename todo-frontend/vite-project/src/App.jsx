@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import TodoForm from './comp/TodoForm';
-import TodoList from './comp/TodoList';
+import TodoForm from './components/TodoForm';
+import TodoList from './components/TodoList';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -32,6 +32,9 @@ const App = () => {
 
   useEffect(() => {
     fetchTodos();
+    setInterval(() => {
+      fetchTodos();
+    }, 6000);
   }, []);
 
   const fetchTodos = async () => {
@@ -82,7 +85,7 @@ const App = () => {
   };
   return (
     <div className="app">
-      <h1 className='header'>Todo List</h1>
+      <h1 className='header'>Todo</h1>
       <TodoForm saveTodo={saveTodo} editingTodo={editingTodo} />
       <TodoList
         todos={todos}
