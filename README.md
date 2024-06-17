@@ -8,10 +8,6 @@
   - [Frontend Setup (React)](#frontend-setup-react)
   - [Backend Setup (Java)](#backend-setup-java)
 - [Docker Setup](#docker-setup)
-- [Development Environment](#development-environment)
-  - [Frontend - VS Code](#frontend---vs-code)
-  - [Backend - IntelliJ IDEA](#backend---intellij-idea)
-- [Troubleshooting](#troubleshooting)
 - [License](#license)
 
 ## Project Overview
