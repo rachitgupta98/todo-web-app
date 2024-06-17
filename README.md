@@ -105,6 +105,7 @@ I used docker to create a MySql container that will spin up by using following s
     Navigate to the project root and build the MySQL Docker images:
 
     ```bash
+    cd yoda
     docker-compose up -d
     ```
 
