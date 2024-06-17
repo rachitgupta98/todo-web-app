@@ -112,7 +112,7 @@ public class TaskRepository {
                     .recurrenceType(RecurrenceType.fromValue(rs.getString("recurrence_type")))
                     .build();
 
-                var newDueDate = calculateNextOccurrence(Date.valueOf(task.getDueDate()), task.getRecurrenceType());
+                var newDueDate = calculateNextOccurrence(task.getRecurrenceType());
                 if (newDueDate != null && GeneralUtils.isValidDateFormat(newDueDate) ) {
                     var updatedTask = task.toBuilder().dueDate(String.valueOf(newDueDate));
                     updateTask(updatedTask.build());
@@ -121,11 +121,11 @@ public class TaskRepository {
         }
     }
 
-    private LocalDate calculateNextOccurrence(Date currentDueDate, RecurrenceType recurrenceType) {
+    private LocalDate calculateNextOccurrence(RecurrenceType recurrenceType) {
         return switch (recurrenceType) {
-            case DAILY -> currentDueDate.toLocalDate().plusDays(1);
-            case WEEKLY -> currentDueDate.toLocalDate().plusWeeks(1);
-            case MONTHLY -> currentDueDate.toLocalDate().plusMonths(1);
+            case DAILY -> LocalDate.now().plusDays(1);
+            case WEEKLY -> LocalDate.now().plusWeeks(1);
+            case MONTHLY -> LocalDate.now().plusMonths(1);
             default -> null;
         };
     }
