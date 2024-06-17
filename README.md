@@ -7,7 +7,8 @@
 - [Getting Started](#getting-started)
   - [Frontend Setup (React)](#frontend-setup-react)
   - [Backend Setup (Java)](#backend-setup-java)
-- [Docker Setup](#docker-setup)
+- [Docker MySql Setup](#docker-setup)
+- [Application Snapshot](#application-snapshot)
 - [License](#license)
 
 ## Project Overview
@@ -111,6 +112,12 @@ I used docker to create a MySql container that will spin up by using following s
 
     - **Frontend**: `http://localhost:5173`
     - **Backend**: `http://localhost:8989`
+
+
+
+## Application Snapshot
+<img width="906" alt="image" src="https://github.com/rachitgupta98/todo-web-app/assets/43313965/789a7b25-fcc8-4f0e-b110-8588fca31227">
+
 
 ## License
 
