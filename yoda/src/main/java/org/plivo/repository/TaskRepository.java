@@ -95,7 +95,7 @@ public class TaskRepository {
 
     public void generateRecurringTasks() throws SQLException {
         // SQL query to select active recurring tasks
-        String query = "SELECT * FROM TODO_TASKS WHERE is_recurring = 1 AND is_active = 1 AND due_date < CURDATE()";
+        String query = "SELECT * FROM TODO_TASKS WHERE is_recurring = 1 AND is_active = 1 AND due_date <= CURDATE()";
 
         try (var conn = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
              var stmt = conn.createStatement();
