@@ -37,7 +37,6 @@ button {
 }
 
 
-
 /* Container for the form */
 .form-container {
   max-width: 500px;
@@ -48,7 +47,6 @@ button {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Input fields */
 .form-container input[type="text"],
 .form-container textarea,
 .form-container select {
@@ -60,15 +58,13 @@ button {
   font-size: 16px;
 }
 
-/* Textarea specific styling */
 .form-container textarea {
   height: 100px;
-  resize: vertical; /* Allows the textarea to be resized vertically */
+  resize: vertical;
 }
 
-/* Date input */
 .form-container input[type="date"] {
-  width: calc(100% - 22px); /* Adjusted for the width of the padding and border */
+  width: calc(100% - 22px);
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -76,7 +72,6 @@ button {
   font-size: 16px;
 }
 
-/* Select dropdown */
 .form-container select {
   width: 100%;
   padding: 10px;
@@ -86,7 +81,6 @@ button {
   font-size: 16px;
 }
 
-/* Checkbox and label */
 .form-container label {
   display: block;
   margin-bottom: 10px;
@@ -98,9 +92,8 @@ button {
   margin-right: 10px;
 }
 
-/* Buttons */
 .form-container button {
-  background-color: #4caf50; /* Green */
+  background-color: #4caf50;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -114,25 +107,19 @@ button {
 }
 
 .form-container button:hover {
-  background-color: #45a049; /* Darker green */
+  background-color: #45a049;
 }
 
 .form-container button[type="button"] {
-  background-color: #f44336; /* Red */
+  background-color: #f44336; 
   margin-left: 10px;
 }
 
 .form-container button[type="button"]:hover {
-  background-color: #da190b; /* Darker red */
+  background-color: #da190b;
 }
 
-
-
-
-
-
-
-
+/* Css for Todo Items */
 
 .todo-item {
   background-color: #fff;
@@ -169,7 +156,7 @@ button {
 
 .todo-item .recurring {
   font-weight: bold;
-  color: #4CAF50; /* Green color for recurring tasks */
+  color: #4CAF50; 
 }
 
 .deleteBtn {
@@ -204,21 +191,17 @@ button {
 }
 
 
-
-
-
-/* Container for the entire todo list */
+/* css for todo list */
 .todo-list {
   display: flex;
-  justify-content: space-around; /* Adjust spacing between columns */
+  justify-content: space-around;
   margin: 20px auto;
-  max-width: 900px; /* Adjust max width as needed */
+  max-width: 900px;
 }
 
-/* Container for active todos */
 .active-todos,
 .cancelled-todos {
-  flex: 1; /* Take up equal space */
+  flex: 1; 
   padding: 20px;
   margin-right: 20px;
   background-color: #f9f9f9;
@@ -226,7 +209,6 @@ button {
   border-radius: 8px;
 }
 
-/* Heading for active and cancelled todos */
 .active-todos h2,
 .cancelled-todos h2 {
   font-size: 18px;
@@ -234,10 +216,10 @@ button {
   color: #333;
 }
 
-/* Optional: Responsive adjustments */
+
 @media (max-width: 768px) {
   .todo-list {
-    flex-direction: column; /* Stack items vertically on smaller screens */
+    flex-direction: column;
   }
 
   .active-todos,
