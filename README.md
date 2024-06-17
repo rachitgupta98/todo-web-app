@@ -7,7 +7,8 @@
 - [Getting Started](#getting-started)
   - [Frontend Setup (React)](#frontend-setup-react)
   - [Backend Setup (Java)](#backend-setup-java)
-- [Docker Setup](#docker-setup)
+- [Docker MySql Setup](#docker-setup)
+- [Application Snapshot](#application-snapshot)
 - [License](#license)
 
 ## Project Overview
@@ -46,7 +47,7 @@ Follow these steps to set up and run the React frontend application:
 1. **Navigate to the Frontend Directory**:
 
     ```bash
-    cd cd todo-frontend/vite-project/
+    cd todo-frontend/vite-project/
     ```
 
 2. **Install Dependencies**:
@@ -104,6 +105,7 @@ I used docker to create a MySql container that will spin up by using following s
     Navigate to the project root and build the MySQL Docker images:
 
     ```bash
+    cd yoda
     docker-compose up -d
     ```
 
@@ -111,6 +113,13 @@ I used docker to create a MySql container that will spin up by using following s
 
     - **Frontend**: `http://localhost:5173`
     - **Backend**: `http://localhost:8989`
+
+
+
+## Application Snapshot
+<img width="906" alt="image" src="https://github.com/rachitgupta98/todo-web-app/assets/43313965/212bf149-4493-4309-b769-2f30fccc24f4">
+
+
 
 ## License
 
