@@ -108,8 +108,23 @@ I used docker to create a MySql container that will spin up by using following s
     cd yoda
     docker-compose up -d
     ```
+2. **Database Design**:
+   The `TODO_TASKS` table stores information about the users of the application.
 
-3. **Access the Application**:
+| Column Name | Data Type | Description                       | Constraints            |
+|-------------|-----------|-----------------------------------|------------------------|
+| `task_id`   | INT       | Unique identifier for each task   | Primary Key, Auto-Increment |
+| `task_title`  | VARCHAR   | Task title       | Unique, Not Null       |
+| `description`     | VARCHAR   | Task desription             |        |
+| `due_date`  | date   | Due date of task          |                |
+| `priority`| ENUM ('HIGH', 'MEDIUM', 'LOW') | Priority of task   |  |
+| `is_active`| TINYINT(1) | Given task is active or not     | NOT NULL |
+| `is_recurring`| TINYINT(1) | Given task is recurring task or not     | DEFAULT 0 |
+| `recurrence_type`| VARCHAR(10) | Type of Recurrence (DAILY, WEEKLY, MONTHLY)     | DEFAULT NULL |
+| `creation_date`| datetime | Timestamp of task creation     | Default current_timestamp |
+| `updation_date`| datetime | Timestamp of task updation     | Default current_timestamp |
+
+4. **Access the Application**:
 
     - **Frontend**: `http://localhost:5173`
     - **Backend**: `http://localhost:8989`
